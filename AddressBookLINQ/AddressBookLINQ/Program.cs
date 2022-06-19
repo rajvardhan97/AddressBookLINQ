@@ -8,6 +8,7 @@ namespace AddressBookLINQ
             Contact contactData = new Contact();
             Contact contactData2 = new Contact();
             AddressBook addressBook = new AddressBook();
+
             addressBook.CreateDataTable();
             contactData.ID = 1;
             contactData.FirstName = "Rajvardhan";

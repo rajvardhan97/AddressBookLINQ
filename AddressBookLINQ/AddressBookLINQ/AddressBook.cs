@@ -102,7 +102,6 @@ namespace AddressBookLINQ
             dtRow["PhoneNumber"] = contact.PhoneNumber;
             dtRow["Email"] = contact.Email;
             dataTable.Rows.Add(dtRow);
-
         }
         public void Display()
         {
