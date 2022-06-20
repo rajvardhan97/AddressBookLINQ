@@ -59,5 +59,13 @@ namespace AddressBookLINQ
             string actual = address.SortBasedOnNameInDataTable("Najibabad");
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void GivenCountQuery_BasedOnCityandState_returnString()
+        {
+            string expected = "1 1 ";
+            string actual = address.RetrieveCountBasedOnType();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
