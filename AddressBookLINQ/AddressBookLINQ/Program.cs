@@ -19,6 +19,7 @@ namespace AddressBookLINQ
             contactData.City = "Najibabad";
             contactData.State = "UP";
             contactData.zip = 246763;
+            contactData.Type = "Family";
             addressBook.InsertintoDataTable(contactData);
 
             contactData2.ID = 2;
@@ -30,6 +31,7 @@ namespace AddressBookLINQ
             contactData2.City = "Roorke";
             contactData2.State = "UK";
             contactData2.zip = 247001;
+            contactData2.Type = "Friends";
             addressBook.InsertintoDataTable(contactData2);
 
             addressBook.Display();

@@ -17,5 +17,6 @@ namespace AddressBookLINQ
         public Int64 PhoneNumber { get; set; }
         public Int64 zip { get; set; }
         public string Email { get; set; }
+        public string Type { get; set; }
     }
 }

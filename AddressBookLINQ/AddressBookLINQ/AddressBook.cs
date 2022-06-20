@@ -58,6 +58,11 @@ namespace AddressBookLINQ
             dtColumn.ColumnName = "Zip";  
             dataTable.Columns.Add(dtColumn);
 
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(string);
+            dtColumn.ColumnName = "ContactType";
+            dataTable.Columns.Add(dtColumn);
+
         }
         public int AddValues()
         {
@@ -73,6 +78,7 @@ namespace AddressBookLINQ
             contact.City = "Najibabad";
             contact.State = "UP";
             contact.zip = 246763;
+            contact.Type = "Family";
             InsertintoDataTable(contact);
 
             contacts.ID = 2;
@@ -84,6 +90,7 @@ namespace AddressBookLINQ
             contacts.City = "Roorke";
             contacts.State = "UK";
             contacts.zip = 247001;
+            contact.Type = "Friends";
             InsertintoDataTable(contacts);
 
             return dataTable.Rows.Count;
@@ -101,13 +108,14 @@ namespace AddressBookLINQ
             dtRow["Zip"] = contact.zip;
             dtRow["PhoneNumber"] = contact.PhoneNumber;
             dtRow["Email"] = contact.Email;
+            dtRow["Type"] = contact.Type;
             dataTable.Rows.Add(dtRow);
         }
         public void Display()
         {
             foreach (DataRow dtRows in dataTable.Rows)
             {
-                Console.WriteLine(" ID: {0} \n First Name: {1} \n Last Name: {2} \n Address: {3} \n City: {4} \n State: {5} \n Zip: {6} \n Phone Number: {7} \n Email: {8} \n", dtRows["ID"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
+                Console.WriteLine(" ID: {0} \n First Name: {1} \n Last Name: {2} \n Address: {3} \n City: {4} \n State: {5} \n Zip: {6} \n Phone Number: {7} \n Email: {8} \n {9} \n", dtRows["ID"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"], dtRows["Type"]);
             }
         }
 
