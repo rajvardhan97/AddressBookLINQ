@@ -43,5 +43,13 @@ namespace AddressBookLINQ
             string actual = address.RetrieveBasedOnCityorState("Roorke", "UP");
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void GivenRetrieveCount_BasedOnCityandState_returnString()
+        {
+            string expected = "1 1 ";
+            string actual = address.RetrieveCountBasedOnCityorState();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
